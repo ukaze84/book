@@ -1,0 +1,78 @@
+<div class="fixed-action-btn horizontal" style="bottom: 45px; right: 45px;width:60px;height:60px">
+  <button class="btn-floating btn-large red" class="ui basic button" id="shopcart">
+    <i class="ion-bag icon-fix"></i>
+  </button>
+</div>
+
+
+
+<div id="bookCartbooks" class="ui large modal" style="height: 494px;overflow: hidden;border-radius:15px">
+   
+  <div class="header grey-text text-darken-4 noto300" style="text-align:center;box-shadow:none;border:none;background:#f9fafb">
+    <i class="ion-bag"></i> 購物車
+  </div>
+    
+  <div class="description" style="background:#f9fafb;height:80%;padding:30px;overflow-y: scroll;">
+    <table class="ui table" style="box-shadow:none;border:none;background:#f9fafb">
+      <tr class="center aligned cartRow" data-id="{{ item.bid }}" v-for="item in books.items">
+        <td style="width:24%;padding-top:10px;padding-bottom:10px">
+          <h2 class="ui image header">
+              <img class=" ui small rounded image" src="{{ item.image }}">
+            </h2>
+        </td>
+        <td style="width:35%;padding-right:10px">
+            <h3 class="ui header">  
+              <div class="sub header">
+                第 {{ item.vers }} 版
+              </div>
+              <div class="content">
+                {{ item.name }}
+                <div class="sub header">
+                {{ item.author }}
+                </div>
+              </div>
+            </h3>
+        </td>
+        <td style="width:20%">
+          <h3 class="ui header">
+            <div class="content noto300">
+              {{ item.course }}
+              <div class="sub header" style="font-size:1.2rem">
+              {{ item.prof }}
+              </div>
+            </div>
+          </h3>
+        </td>
+        <td style="width:12%">
+            <h3 class="ui circular label big olive noto300">{{ item.price }} 元</h3>
+          </td>
+        <td  style="width:8%">
+            <button class="waves-effect waves-circle waves-light red btn-floating btn-large" data-id="{{ item.bid }}" onclick="remove({{ item.bid }})">
+              <i class="ion-trash-a" style="font-size: 25pt;"></i>
+            </button>
+        </td>
+      </tr>
+    </table>
+      <div class="floated left noto300" style="padding-top: 10px;padding-left: 30px;">
+        購物車中有 {{ books.count }} 本書，總金額為 ${{ books.cost }} 元
+      </div>
+
+      <div class="floated right noto300" style="padding-top: 10px;padding-left: 30px;">
+      <div class="ui deny basic button noto" style="box-shadow:none">關閉</div>
+      <a href="http://campus.tenoz.asia:1003/details">
+        <div id="checkout" class="waves-effect waves-light btn positive noto300">
+          <i class="ion-checkmark right"></i>結帳
+        </div>
+  <!--       <div id="checkout" class="ui positive right labeled large icon button noto300">
+          結帳<i class="checkmark icon"></i>
+        </div> -->
+      </a>
+
+    </div>
+  </div>
+
+    <div class="actions" style="box-shadow: none;border: none;height:0;padding:0">
+      </div> 
+
+</div>
+

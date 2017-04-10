@@ -1,0 +1,44 @@
+<div id="books" class="ui container" style="margin-top:30px;width: 70%;margin-bottom:100px;">
+	<div class="ui segment" v-for="item in books">
+		<table class="ui table" style="box-shadow:none;border:none">
+			<tr class="center aligned">
+				<td style="width:24%">
+					<h2 class="ui image header">
+	    				<img class="ui small rounded image" src="{{ item.image }}">
+	    			</h2>
+				</td>
+				<td style="width:35%;padding-right:10px">
+	    			<h3 class="ui header">	
+	    				<div class="sub header">
+	    					第 {{ item.vers }} 版
+	    				</div>
+	    				<div class="content">
+		    				{{ item.name }}
+		    				<div class="sub header">
+		    				{{ item.author }}
+		    				</div>
+	    				</div>
+	    			</h3>
+				</td>
+	    		<td style="width:20%">
+	    			<h3 class="ui header">
+	    				<div class="content noto300">
+		    				{{ item.course }}
+		    				<div class="sub header" style="font-size:1.2rem">
+		    				{{ item.prof }}
+		    				</div>
+	    				</div>
+	    			</h3>
+	    		</td>
+	    		<td style="width:12%">
+	    			<h3 class="ui header noto300">{{ item.price }} 元</h3>
+	    		</td>
+				<td  style="width:8%">
+	    			<button class="waves-effect waves-circle waves-light red btn-floating btn-large addCart" data-id="{{ item.bid }}">
+	    				<i class="big ion-ios-cart icon"></i>
+	    			</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

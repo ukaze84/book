@@ -1,0 +1,140 @@
+<div class="row" style="margin-top:50px;">
+	<div class="container">
+		<div class="row" style="margin-bottom:0">
+			<div class="col s12">
+				<div class="card" style="margin-bottom:0">
+					<div class="center-align card-content white orange-text text-darken-4" style="font-size:20pt;font-weight:500">
+						{{CourseName}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul class="tabs">
+			<li class="tab col s3"><a href="#tab1" class="active">課程資訊</a></li>
+			<li class="tab col s3"><a href="#tab2" id="chart_creat">課程大綱</a></li>
+			<li class="tab col s3"><a href="#tab3">討論</a></li>
+		</ul>
+
+		<div id="tab1" style="display: block;">
+			<div class="row">
+				<div class="col s12">
+					<div class="card darken-1 blurring mainPanel" style="background-color:rgba(255, 255, 255, 0.92);">
+						<div class="ui inverted dimmer active"></div>
+						<div class="card-content black-text container">
+							<div class="ui header center-align">
+								<i class="material-icons yellow darken-2 circle c-icon" style="font-size:75px">face</i>
+								<div class="ui header" style="margin-top:0">{{Professor}}				
+									<div class="sub header">{{ProfBack}}</div></div>
+								<div class="row center-align">	
+									<div class="col s6">
+									<span>
+										<i class="material-icons pink circle c-icon">today</i>
+										<div class="ui header" style="margin-top:0 ">{{Term}}
+										<div class="sub header">學制</div></div></span>
+									</div>
+									<div class="col s6">
+										<span>
+											<i class="material-icons orange circle c-icon">lightbulb_outline</i>
+											<div class="ui header" style="margin-top:0 ">{{Points}}
+											<div class="sub header">學分數</div></div></span>
+									</div>								
+								</div>
+								<div class="row center-align">	
+									<div class="col s6">
+										<span>
+											<i class="material-icons blue circle c-icon">comment</i>
+											<div class="ui header" style="margin-top:0 ">{{Language}}
+											<div class="sub header">授課語言</div></div></span>		
+									</div>
+									<div class="col s6">
+										<span>
+											<i class="material-icons green circle c-icon">done</i><br>
+											<div class="ui header" style="margin-top:0 ">{{SelectType}}
+											<div class="sub header">選別</div></div></span>
+									</div>								
+								</div>
+								<div class="row center-align">
+									<i class="material-icons purple darken-2 circle c-icon" style="font-size:75px">access_time</i>
+									<div class="ui header" style="margin-top:0 ">{{CourseTime}}
+									<div class="sub header">開課時間</div></div>
+								</div>
+								<div class="row center-align">	
+									<div class="col s6">
+										<span>
+											<i class="material-icons teal circle c-icon">home</i>
+											<div class="ui header" style="margin-top:0 ">{{Department}}
+											<div class="sub header">開課單位</div></div></span>		
+									</div>
+									<div class="col s6">
+										<span>
+											<i class="material-icons red circle c-icon">group</i><br>
+											<div class="ui header" style="margin-top:0 ">{{InDepart}}
+											<div class="sub header">開課人數</div></div></span>
+									</div>								
+								</div>
+								<div class="row center-align">	
+									<div class="col s6">
+										<span>
+											<i class="material-icons cyan circle c-icon">wc</i>
+											<div class="ui header" style="margin-top:0 ">{{OutDepart}}
+											<div class="sub header">外系名額</div></div></span>		
+									</div>
+									<div class="col s6">
+										<span>
+											<i class="material-icons indigo circle c-icon">swap_vert</i><br>
+											<div class="ui header" style="margin-top:0 ">{{Attributes}}
+											<div class="sub header">可否加退</div></div></span>
+									</div>								
+								</div>
+									{{Expert}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="tab2" style="display: block;">
+			<div class="row">
+				<div class="col s12">
+					<div class="card blue-text darken-1 mainPanel" style="background-color:rgba(255, 255, 255, 0.92);">
+						<div class="card-content black-text">
+							<canvas id="chart1" width="400" height="150"></canvas>
+							<canvas id="chart2" width="400" height="150"></canvas>
+<!-- 							<ul>
+								<li><a class="noto" href="#">課程大綱</a></li>
+								<li>課程評量</li>
+							</ul> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="tab3" style="display: block;">
+			<div class="row">
+				<div class="col s12">
+					<div class="card blue-text darken-1 mainPanel" style="background-color:rgba(255, 255, 255, 0.92);">
+						<div class="card-content black-text">
+							<span class="card-title">討論</span>
+							<ul>
+							    <li>Rythem 相關課程討論</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- 				
+教授:{{Professor}}
+教授專長:{{Expert}}
+學期{{SelectType}}
+學分:{{Points}}
+必選修{{Term}}
+授課語言:{{Language}}
+上課時間:{{CourseTime}}
+上課地點:{{Section}}
+ -->
+{{Script}}

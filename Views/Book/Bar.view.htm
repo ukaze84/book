@@ -1,0 +1,29 @@
+<div class="ui container" style="margin-top:30px">
+
+    <center>
+			<!-- Warning tag <center> is already removed in HTML5 ! -->
+
+        <select name="depart" class="ui selection dropdown" style="margin-bottom:30px">
+            <option value="" active selected>科系</option>
+            <option value="51" >資工系</option>
+        </select>
+        
+        <select name="grade" class="ui selection dropdown" style="margin-bottom:30px;">
+            <option value= "" active selected>年級</option>
+            <option value="1">大一</option>
+            <option value="2">大二</option>
+            <option value="3">大三</option>
+            <option value="4">大四</option>
+            <option value="8">碩一</option>
+            <option value="9">碩二</option>
+        </select>
+		<div class="ui hidden divider" style="border: 0;"></div> 
+        <input type="hidden" name="class" value="1">
+		<div class="yellow ui large buttons" style="maring-bottom:30px;">
+            <button class="ui active button" value="1" onclick="setClass(this.value);">甲班</button>
+       		<div class="or" style="width:0"></div>
+            <button class="ui button" value="2" onclick="setClass(this.value)">乙班</button>
+        </div>
+
+	</center>
+</div>
